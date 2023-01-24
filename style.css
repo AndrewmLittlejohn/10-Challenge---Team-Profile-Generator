@@ -1,0 +1,12 @@
+body {
+background-color: lightblue;
+color: darkblue;
+display: flex;
+
+}
+
+header{
+background-color: aliceblue;
+height: 20px;
+padding-bottom: 10px;
+}
