@@ -3,7 +3,6 @@ const Employee = require('../lib/Employee.js');
 
 // /Users/andrewlittlejohn/Desktop/Challenge folder/10 Challenge/lib/Employee.js
 
-
 describe("Employee", () => {
   describe("name",()=> {
     it("should return the employee's name as it was rendered in the terminal via inquirer", () =>{
