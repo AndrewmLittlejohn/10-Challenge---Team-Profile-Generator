@@ -55,13 +55,33 @@ console.log(response.employee.length)
 for(var i = 0; i < response.employee.length; i++){
  // let people = [];
   people[i] = new BasicInfo.Badge(`${response.employee[i].Name}`, `${response.employee[i].Id}`, `${response.employee[i].Email}`, `${response.employee[i].gitId}`);
+ 
   people[i].info()
-
-
-
 }
 
-let sitecode = `
+function createCards(){
+
+  let peopleCards = [];
+  for (var i = 0; i < people.length; i++){
+            
+    var code = `
+      <div class="p-2 card-body">
+          <h5 class="card-title" id="name">${people[i].name}</h5>
+          <h6 class="card-subtitle mb-2 text-muted" id="role">Card subtitle</h6>
+          <ul class="list-group">
+            <li class="list-group-item active" aria-current="true">ID: ${people[i].id}</li>
+            <li class="list-group-item">Email: ${people[i].email}</li>
+            <li class="list-group-item">GitHub: <a href="">${people[i].gitId}</a></li>
+          </ul>
+        </div> 
+    `;
+     peopleCards.push(code);
+   };
+  return peopleCards;
+}
+console.log(createCards());
+
+let fullSiteCode = `
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,75 +90,24 @@ let sitecode = `
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
   <title> Challenge 10 working HTML</title>
   <link rel="stylesheet" type="text/css" href="./style.css" />
-
-
-
+  
 </head>
 <body>
   <header></header>
   
   <div class="card flex-row align-content-center justify-content-between">
-    <div class="p-2 card-body">
-      <h5 class="card-title" id="name"></h5>
-      <h6 class="card-subtitle mb-2 text-muted" id="role">Card subtitle</h6>
-      <ul class="list-group">
-        <li class="list-group-item active" aria-current="true">ID:</li>
-        <li class="list-group-item">Email: </li>
-        <li class="list-group-item">GitHub: <a href="">Placeholder</a></li>
-      </ul>
-    </div>
-    <div class="p-2 card-body">
-      <h5 class="card-title" id="name">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-muted" id="role">Card subtitle</h6>
-      <ul class="list-group">
-        <li class="list-group-item active" aria-current="true">ID:</li>
-        <li class="list-group-item">Email: </li>
-        <li class="list-group-item">GitHub: <a href="">Placeholder</a></li>
-      </ul>
-    </div>
-    <div class="p-2 card-body">
-      <h5 class="card-title" id="name">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-muted" id="role">Card subtitle</h6>
-      <ul class="list-group">
-        <li class="list-group-item active" aria-current="true">ID:</li>
-        <li class="list-group-item">Email: </li>
-        <li class="list-group-item">GitHub: <a href="">Placeholder</a></li>
-      </ul>
-    </div>
-    <div class="p-2 card-body">
-      <h5 class="card-title" id="name">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-muted" id="role">ID:</h6>
-      <ul class="list-group">
-        <li class="list-group-item active" aria-current="true">ID:</li>
-        <li class="list-group-item">Email: </li>
-        <li class="list-group-item">GitHub: <a href="">Placeholder</a></li>
-      </ul>
-    </div>
-    <div class="p-2 card-body">
-      <h5 class="card-title" id="name">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-muted" id="role">Card subtitle</h6>
-      <ul class="list-group">
-        <li class="list-group-item active" aria-current="true">ID:</li>
-        <li class="list-group-item">Email: </li>
-        <li class="list-group-item">GitHub: <a href="">Placeholder</a></li>
-      </ul>
-    </div>
+  ${createCards()}
+
   </div>
-
-
-
-
+  
   <script src="./script.js"></script>
 </body>
+  </html>
+  `;
 
-</html>
+  fs.appendFile(filename, fullSiteCode, (err) => 
+  err ? console.error(err) : console.log('Success'))  
 
-`;
-
-
-
-  // fs.appendFile(filename, website.sitecode, (err) => 
-  // err ? console.error(err) : console.log('Success'))  
 });
 
 // const newEmployee = new Badge(`${response.employee[i].Name}`, `${response.employee[i].Id}`, `${response.employee[i].Email}`, `${response.employee[i].gitId}`)
