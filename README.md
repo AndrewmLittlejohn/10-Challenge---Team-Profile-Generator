@@ -1,24 +1,23 @@
 # 10-Challenge---Team-Profile-Generator
 
-notes:
+### Video Link
 
+Challenge No.10 video.webm
 
-1. the createCards function still has a bunch of unncessary characters when its creates the peopleCards, some of which can be seen on the rendered 
-   HTML page
+### Description 
 
+Challenge Ten was to create a team generator via the command line using inquirer.js and to test the class/subclass functionality using jest. On the project I learned looping and the when object on inquirer and I honed my skills using jest. 
 
+### Sources
 
-sources
+The following git hubs provided important guidance in the making of my readme. I do not believe any code was directly pasted into my file as such I don't have any direct citations listed in the JS file.
 
+https://www.sitepoint.com/a-basic-html5-template/
 
-used to gather basics for HTML
-1. https://www.sitepoint.com/a-basic-html5-template/
+Module 10, no. 16. (provide guidance on throwing errors if appropriate response is not provided)
 
-2. Module 10, no. 16. (provide guidance on throwing errors if appropriate response is not provided)
+https://codesandbox.io/s/teamprofilegenerator-9npu4?file=/index.js
 
-3. https://codesandbox.io/s/teamprofilegenerator-9npu4?file=/index.js
-  used for guidance on how to loop in inquirer
-
-4. https://github.com/SBoudrias/Inquirer.js/blob/master/packages/inquirer/examples/when.js
-    Guidance on using the when object
+https://github.com/SBoudrias/Inquirer.js/blob/master/packages/inquirer/examples/when.js
+   
 
