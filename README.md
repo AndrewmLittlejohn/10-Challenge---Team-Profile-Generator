@@ -2,7 +2,7 @@
 
 ### Video Link
 
-Challenge No.10 video.webm
+<a href="Challenge No.10 video.webm">Challenge 10 video</a>
 
 ### Description 
 
