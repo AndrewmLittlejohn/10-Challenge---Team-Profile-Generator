@@ -2,7 +2,7 @@
 
 ### Video Link
 
-<a href="Challenge No.10 video.webm">Challenge 10 video</a>
+<a href="Challenge No.10 video.webm">Challenge 10 video</a> Video will need to be downloaded to work due to github contraints, it is also provided in the submitted response as well.
 
 ### Description 
 
